@@ -8,8 +8,8 @@ print(sklearn.__version__)
 # Load the model
 model = joblib.load('final_model.pkl')
 
-df = pd.read_csv('../data/zomato_cleaned.csv')
-cuisines_df = pd.read_csv('../data/cuisines.csv')
+df = pd.read_csv('zomato_cleaned.csv')
+cuisines_df = pd.read_csv('cuisines.csv')
 
 # function to convert multiselect to multilabel
 def multilabel_binarizer(inputs, labeles):
