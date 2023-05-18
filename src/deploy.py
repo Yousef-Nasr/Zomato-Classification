@@ -6,7 +6,7 @@ import streamlit as st
 import sklearn
 print(sklearn.__version__)
 # Load the model
-with open('../models/final_model.pkl', 'rb') as f:
+with open('final_model.pkl', 'rb') as f:
     model = joblib.load(f)
 #model = joblib.load('../models/final_model.pkl')
 
