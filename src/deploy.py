@@ -4,7 +4,6 @@ import joblib
 import matplotlib.pyplot as plt
 import streamlit as st
 import sklearn
-print(sklearn.__version__)
 # Load the model
 with open('final_model.pkl', 'rb') as f:
     model = joblib.load(f)
