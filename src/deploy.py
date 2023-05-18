@@ -6,7 +6,9 @@ import streamlit as st
 import sklearn
 print(sklearn.__version__)
 # Load the model
-model = joblib.load('../models/final_model.pkl')
+with open('../models/final_model.pkl', 'rb') as f:
+    model = joblib.load(f)
+#model = joblib.load('../models/final_model.pkl')
 
 df = pd.read_csv('zomato_cleaned.csv')
 cuisines_df = pd.read_csv('cuisines.csv')
