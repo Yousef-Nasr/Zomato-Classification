@@ -1,4 +1,3 @@
-import pickle
 import pandas as pd
 import numpy as np
 import joblib
@@ -7,7 +6,7 @@ import streamlit as st
 import sklearn
 
 # Load the model
-model = pickle.load(open('final_model.pkl', 'rb'))
+model = joblib.load('final_model.pkl')
 
 df = pd.read_csv('zomato_cleaned.csv')
 cuisines_df = pd.read_csv('cuisines.csv')
