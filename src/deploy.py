@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import streamlit as st
 import sklearn
 # Load the model
-model = joblib.load('../models/final_model.pkl')
+model = joblib.load('final_model.pkl')
 
 df = pd.read_csv('zomato_cleaned.csv')
 cuisines_df = pd.read_csv('cuisines.csv')
