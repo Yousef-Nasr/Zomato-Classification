@@ -4,8 +4,7 @@ import joblib
 import matplotlib.pyplot as plt
 import streamlit as st
 import sklearn
-# Load the model
-model = joblib.load('final_model.pkl')
+
 
 df = pd.read_csv('zomato_cleaned.csv')
 cuisines_df = pd.read_csv('cuisines.csv')
@@ -19,6 +18,8 @@ def multilabel_binarizer(inputs, labeles):
         else:
             bi_list.append(0)
     return pd.DataFrame([bi_list], columns=labeles)
+# Load the model
+model = joblib.load('final_model.pkl')
 
 # prediction function
 def predict(online_order, book_table, votes, rest_type, approx_cost, listed_in_type, listed_in_city, cuisines):
