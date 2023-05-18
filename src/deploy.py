@@ -7,7 +7,7 @@ import streamlit as st
 import sklearn
 
 # Load the model
-model = pickle.load(open('final_model.pkl'))
+model = pickle.load(open('final_model.pkl', 'rb'))
 
 df = pd.read_csv('zomato_cleaned.csv')
 cuisines_df = pd.read_csv('cuisines.csv')
